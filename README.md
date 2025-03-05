@@ -28,30 +28,31 @@ This project generates a QR code for a given URL using Python. The generated QR 
      ```sh
     pip install qrcode[pil]
      ```
-## Usage
-    ```sh
-    Open the qrcode1.py file.
-    Modify the URL in the qr.add_data method to your desired URL.
-    Run the script:
-     ```
+    ## Usage
+        ```sh
+        Open the qrcode1.py file.
+        Modify the URL in the qr.add_data method to your desired URL.
+        Run the script:
+        ```
 
 4. The generated QR code will be saved as qr.png in the project directory.
+     ```sh
+     ## Example
+     Here is an example of generating a QR code for a GitHub profile:
 
-## Example
-Here is an example of generating a QR code for a GitHub profile:
+    import qrcode as qr
 
-import qrcode as qr
+    qr = qr.QRCode(
+        version=1,
+        error_correction=qr.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
 
-qr = qr.QRCode(
-    version=1,
-    error_correction=qr.constants.ERROR_CORRECT_L,
-    box_size=10,
-    border=4,
-)
+    qr.add_data('https://github.com/Akubrecah')
+    qr.make(fit=True)
 
-qr.add_data('https://github.com/Akubrecah')
-qr.make(fit=True)
-
-img = qr.make_image(fill_color='blue', back_color='white')
-img.save('qr.png')
+    img = qr.make_image(fill_color='blue', back_color='white')
+    img.save('qr.png')
+     ```
 
