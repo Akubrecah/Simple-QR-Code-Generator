@@ -36,23 +36,23 @@ This project generates a QR code for a given URL using Python. The generated QR 
         ```
 
 4. The generated QR code will be saved as qr.png in the project directory.
-     ```sh
-     ## Example
-     Here is an example of generating a QR code for a GitHub profile:
+```sh
+## Example
+Here is an example of generating a QR code for a GitHub profile:
 
-    import qrcode as qr
+import qrcode as qr
 
-    qr = qr.QRCode(
-        version=1,
-        error_correction=qr.constants.ERROR_CORRECT_L,
-        box_size=10,
-        border=4,
-    )
+qr = qr.QRCode(
+version=1,
+error_correction=qr.constants.ERROR_CORRECT_L,
+box_size=10,
+border=4,
+)
 
-    qr.add_data('https://github.com/Akubrecah')
-    qr.make(fit=True)
+qr.add_data('https://github.com/Akubrecah')
+qr.make(fit=True)
 
-    img = qr.make_image(fill_color='blue', back_color='white')
-    img.save('qr.png')
-     ```
+img = qr.make_image(fill_color='blue', back_color='white')
+img.save('qr.png')
+```
 
