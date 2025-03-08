@@ -21,22 +21,22 @@ This project generates a QR code for a given URL using Python. The generated QR 
    git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
    ```
 2. Navigate to the project directory:
-   ```sh
+   ```
    cd YOUR_REPOSITORY_NAME
    ```
 3. Install the required modules:
-     ```sh
+     ```
     pip install qrcode[pil]
      ```
     ## Usage
-        ```sh
+        ```
         Open the qrcode1.py file.
         Modify the URL in the qr.add_data method to your desired URL.
         Run the script:
         ```
 
 4. The generated QR code will be saved as qr.png in the project directory.
-    ```sh
+    ```python 
     ## Example
     Here is an example of generating a QR code for a GitHub profile:
 
